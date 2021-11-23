@@ -31,9 +31,14 @@ RUN sudo apt install -y git zsh \
 COPY --chown=ubuntu zsh-autosuggestions /home/ubuntu/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 COPY --chown=ubuntu zsh-syntax-highlighting /home/ubuntu/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 COPY --chown=ubuntu zshrc /home/ubuntu/.zshrc
+
+##### 安装基本环境
 USER root
+RUN apt install -y openssh-server openssh-client build-essential vim
+RUN service ssh start
 
 ##### Install MMCV
+USER root
 ENV TORCH_CUDA_ARCH_LIST="6.0 6.1 7.0+PTX"
 ENV TORCH_NVCC_FLAGS="-Xfatbin -compress-all"
 ENV CMAKE_PREFIX_PATH="$(dirname $(which conda))/../"
