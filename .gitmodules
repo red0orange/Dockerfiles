@@ -1,0 +1,15 @@
+[submodule "mmlab/zsh-syntax-highlighting"]
+	path = mmlab/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule "mmlab/zsh-autosuggestions"]
+	path = mmlab/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "mmlab/oh-my-zsh"]
+	path = mmlab/oh-my-zsh
+	url = https://gitee.com/mirrors/oh-my-zsh.git
+[submodule "mmlab/mmdetection"]
+	path = mmlab/mmdetection
+	url = https://github.com/open-mmlab/mmdetection.git
+[submodule "mmlab/mmclassification"]
+	path = mmlab/mmclassification
+	url = https://github.com/open-mmlab/mmclassification.git
